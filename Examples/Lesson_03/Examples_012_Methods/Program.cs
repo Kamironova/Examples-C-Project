@@ -40,23 +40,46 @@ int Method3()
     return DateTime.Now.Year;
 }
 
-int year = Method3();
-System.Console.WriteLine(year);
+//int year = Method3();
+//System.Console.WriteLine(year);
 
 //Вид 4. Метот который принимает и возвращает
 
+// string Method4(int count, string text)
+// {
+//     int i = 0;
+//     string result = String.Empty;
+
+//     while (i < count)
+//     {
+//         result = result + text;
+//         i++;
+//     }
+//     return result;
+// }
+
+// этот же цикл только не While а For:
+
 string Method4(int count, string text)
 {
-    int i = 0;
     string result = String.Empty;
-
-    while (i < count)
+    for (int i = 0; i < count; i++)
     {
         result = result + text;
-        i++;
     }
     return result;
 }
 
-string res = Method4(10,"Ура ");
+string res = Method4(10, "Ура ");
 System.Console.WriteLine(res);
+
+// Цикл в цикле For на примере таблици умножения
+
+for (int i = 2; i <= 10; i++)
+{
+    for (int j = 2; j <= 10; j++)
+    {
+        System.Console.WriteLine($"{i} * {j} = {i * j}");
+    }
+    System.Console.WriteLine();
+}
